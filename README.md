@@ -28,7 +28,15 @@
 ###  Out of Scope (for current version)
 - Promo codes, offers, and discount handling  
 - Add-on purchases (food, beverages, merchandise)  
-- Modify or cancel tickets after booking  
+- Modify or cancel tickets after booking
+
+
+### Non Functional Requirements:
+- High availability (99.9% uptime)
+- Horizontal scalability
+- Strong consistency for seat booking and payments
+- Modular and maintainable code (follows SOLID, unit tests)
+- Localization support (multi-language, timezone)
 
 
 ###  Tech Stack 
