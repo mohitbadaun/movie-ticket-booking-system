@@ -38,6 +38,16 @@
 - Modular and maintainable code (follows SOLID, unit tests)
 - Localization support (multi-language, timezone)
 
+---
+### Entitites: 
+1. User
+2. Movie
+3. Cinema
+4. Show
+5. Seat
+6. Booking/Ticket
+7. Payment
+
 
 ###  Tech Stack 
 - **Backend:** Java Spring Boot / Node.js  
