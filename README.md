@@ -38,7 +38,7 @@
 - Modular and maintainable code (follows SOLID, unit tests)
 - Localization support (multi-language, timezone)
 
----
+--
 ### Entitites: 
 1. User
 2. Movie
@@ -48,11 +48,54 @@
 6. Booking/Ticket
 7. Payment
 
+#### APIs
 
-###  Tech Stack 
-- **Backend:** Java Spring Boot / Node.js  
-- **Frontend:** React / Angular / Mobile App (Flutter/React Native)  
-- **Database:** PostgreSQL / MongoDB  
-- **Cloud:** AWS / Azure  
-- **CI/CD:** GitHub Actions / Bitbucket Pipelines  
-- **Others:** Kafka for async processing, Redis for caching, Elasticsearch for search
+##### Browse APIs
+
+<pre><em>GET api/movies
+  {
+  City,
+  Language,
+  Cinema,
+  Time,
+  Genre
+}</em></pre>
+
+
+<pre><em>GET api/cinema
+  {
+  City,
+  movie
+}</em></pre>
+
+<pre><em>
+GET /api/cinemas/{cinemaId}/shows?movieId=123&date=2025-07-08
+</em></pre>
+
+##### Booking APIs
+
+<pre><em>
+POST /api/bookings
+  {
+  "showId": "s_123",
+  "seatIds": ["A1", "A2"]
+}
+
+Returns : booking_id, invoice
+</em></pre>
+
+<pre><em>
+POST /api/bookings/{bookingId}/pay
+POST /api/bookings/{bookingId}/verify-payment
+</em></pre>
+
+<pre><em>
+GET /api/bookings/{bookingId}/status
+GET /api/users/{userId}/bookings
+</em></pre>
+
+
+
+
+
+
