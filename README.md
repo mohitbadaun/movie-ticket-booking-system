@@ -2,7 +2,6 @@
 
 ### Functional Requirements
 
----
 
 ###  Partner Module
 - Partner Onboarding  
@@ -11,7 +10,6 @@
 - Add/Update movie shows for specific dates and time slots  
 - Set pricing and seat categories (Gold, Silver, Premium, etc.)
 
----
 
 ###  Booking Module
 - Search shows by:
@@ -27,14 +25,11 @@
 - Notification system (email, SMS, WhatsApp)
 
 
----
-
 ###  Out of Scope (for current version)
 - Promo codes, offers, and discount handling  
 - Add-on purchases (food, beverages, merchandise)  
 - Modify or cancel tickets after booking  
 
----
 
 ###  Tech Stack 
 - **Backend:** Java Spring Boot / Node.js  
