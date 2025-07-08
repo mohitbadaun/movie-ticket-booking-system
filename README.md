@@ -26,6 +26,7 @@
 
 
 ###  Out of Scope (for current version)
+- Seat Map
 - Promo codes, offers, and discount handling  
 - Add-on purchases (food, beverages, merchandise)  
 - Modify or cancel tickets after booking
@@ -39,7 +40,7 @@
 - Localization support (multi-language, timezone)
 
 --
-### Entitites: 
+### Entitites:
 1. User
 2. Movie
 3. Cinema
