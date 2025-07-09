@@ -95,8 +95,44 @@ GET /api/bookings/{bookingId}/status
 GET /api/users/{userId}/bookings
 </em></pre>
 
+<pre><em>
+Movies
+GET /movies
+→ List all movies (with optional filters: language, genre, rating, city)
+
+GET /movies/{id}
+→ Get detailed info of a movie by ID
+
+GET /movies/{id}/shows
+→ Get all upcoming shows for a movie (with optional filter: city, date)
+
+</em></pre>
+
+<pre><em>
+Cinemas
+GET /cinemas
+→ List all cinemas (with optional filter: city)
+
+GET /cinemas/{id}
+→ Get details of a cinema by ID
+
+</em></pre>
+
+<pre><em>
+Shows
+GET /shows
+→ List shows (optional filters: movie_id, cinema_id, date, city)
+
+GET /shows/{id}
+→ Get show details by show ID
+</em></pre>
+
+<pre><em>
+</em></pre>
+
+<pre><em>
+</em></pre>
 
 
-
-
-
+<pre><em>
+</em></pre>
