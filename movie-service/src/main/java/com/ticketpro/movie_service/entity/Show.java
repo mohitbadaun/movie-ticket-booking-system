@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "shows")
@@ -29,4 +30,7 @@ public class Show {
 
     private LocalDateTime startTime;
     private LocalDateTime endTime;
+
+    @OneToMany(mappedBy = "show", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<ShowSeat> showSeats;
 }

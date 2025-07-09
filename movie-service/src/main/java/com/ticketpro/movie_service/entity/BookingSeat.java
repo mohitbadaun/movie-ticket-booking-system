@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "booking_seats")
+@Table(name = "booking_seats") // ✅ This line is critical
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -19,10 +19,10 @@ public class BookingSeat {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "booking_id")
+    @JoinColumn(name = "booking_id", nullable = false)
     private Booking booking;
 
     @ManyToOne
-    @JoinColumn(name = "show_seat_id")
+    @JoinColumn(name = "show_seat_id", nullable = false)
     private ShowSeat showSeat;
 }

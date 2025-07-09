@@ -34,6 +34,6 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponseDTO> handleGenericException(Exception ex) {
         ex.printStackTrace(); // Useful in dev, remove or log in prod
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .body(new ErrorResponseDTO("INTERNAL_SERVER_ERROR", "An unexpected error occurred."));
+                .body(new ErrorResponseDTO("INTERNAL_SERVER_ERROR", ex.getMessage()));
     }
 }

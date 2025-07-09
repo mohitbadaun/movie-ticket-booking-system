@@ -26,7 +26,9 @@ public class ShowSeat {
     @JoinColumn(name = "seat_id")
     private Seat seat;
 
+    @Column(name = "is_booked")
     private Boolean isBooked;
+
     private Double finalPrice;
 }
 
