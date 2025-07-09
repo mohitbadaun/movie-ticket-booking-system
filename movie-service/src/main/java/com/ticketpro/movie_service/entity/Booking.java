@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -30,6 +31,9 @@ public class Booking {
 
     private LocalDateTime bookingTime;
 
-    private String status; // e.g. PENDING, CONFIRMED, FAILED
+    private String status;
+
+    @Transient
+    private BigDecimal totalPrice;
 }
 
