@@ -1,4 +1,4 @@
 Movie ticket booking system.
 
 
-![Logo](db.png)
+![Logo](movie_hld.png)
