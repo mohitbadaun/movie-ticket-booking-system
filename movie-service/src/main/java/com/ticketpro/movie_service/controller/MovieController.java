@@ -5,6 +5,8 @@ import com.ticketpro.movie_service.dto.MovieResponseDTO;
 import com.ticketpro.movie_service.service.MovieService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +21,8 @@ import java.util.List;
 public class MovieController {
 
     private final MovieService movieService;
+    private static final Logger log = LoggerFactory.getLogger(MovieService.class);
+
 
     @PostMapping("/add")
     public ResponseEntity<MovieResponseDTO> addMovie(@Valid @RequestBody MovieRequestDTO dto) {
@@ -30,7 +34,7 @@ public class MovieController {
             @RequestParam Long cityId,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate) {
-
+        log.info("log message");
         if (endDate == null) {
             endDate = startDate;
         }

@@ -5,6 +5,7 @@ import com.ticketpro.movie_service.dto.PaymentVerificationDTO;
 import com.ticketpro.movie_service.service.BookingService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.MDC;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
