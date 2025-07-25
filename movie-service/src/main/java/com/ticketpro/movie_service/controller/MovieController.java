@@ -20,14 +20,9 @@ public class MovieController {
 
     private final MovieService movieService;
 
-    @PostMapping
+    @PostMapping("/add")
     public ResponseEntity<MovieResponseDTO> addMovie(@Valid @RequestBody MovieRequestDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(movieService.addMovie(dto));
-    }
-
-    @GetMapping("/search")
-    public ResponseEntity<List<MovieResponseDTO>> getMoviesByTitle(@RequestParam String title) {
-        return ResponseEntity.ok(movieService.getMoviesByTitle(title));
     }
 
     @GetMapping("/by-city")

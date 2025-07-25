@@ -17,13 +17,6 @@ public class CinemaController {
 
     private final CinemaService cinemaService;
 
-    @GetMapping("/by-movie")
-    public ResponseEntity<List<CinemaShowDTO>> getCinemasAndShowsByMovieAndDate(
-            @RequestParam Long movieId,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
-        return ResponseEntity.ok(cinemaService.getCinemasWithShowsByMovieAndDate(movieId, date));
-    }
-
 
     @GetMapping("/by-movie-city-date")
     public ResponseEntity<List<CinemaShowDTO>> getCinemasAndShowsByMovieCityAndDate(

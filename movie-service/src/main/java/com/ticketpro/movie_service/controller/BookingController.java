@@ -3,6 +3,7 @@ import com.ticketpro.movie_service.dto.BookingRequestDTO;
 import com.ticketpro.movie_service.dto.BookingResponseDTO;
 import com.ticketpro.movie_service.dto.PaymentVerificationDTO;
 import com.ticketpro.movie_service.service.BookingService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,9 +24,9 @@ public class BookingController {
         return ResponseEntity.ok(bookingService.initiateBooking(request));
     }
 
-    @PostMapping("/verify")
+    @PostMapping("/confirm")
     public ResponseEntity<String> verifyPayment(
-            @RequestBody PaymentVerificationDTO request) {
+           @Valid @RequestBody PaymentVerificationDTO request) {
         bookingService.verifyPayment(request);
         return ResponseEntity.ok("Booking confirmed successfully.");
     }

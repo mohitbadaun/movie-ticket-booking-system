@@ -104,13 +104,7 @@ CREATE TABLE payments (
     payment_time TIMESTAMP
 );
 
--- Indexes
-CREATE INDEX idx_movies_title ON movies(title);
-CREATE INDEX idx_movies_language ON movies(language_id);
-CREATE INDEX idx_cinemas_city ON cinemas(city_id);
-CREATE INDEX idx_shows_movie ON shows(movie_id);
-CREATE INDEX idx_shows_screen ON shows(screen_id);
-CREATE INDEX idx_show_start_time ON shows(start_time);
+
 
 -- Sample Seed Data
 
